@@ -1,0 +1,39 @@
+# 1.1 - Json-Dictionary arasındaki fark nedir?
+
+
+    Dictionary Pyhton'a özel bir veri yapısıdır fakat Json ise platform ve dilden bağımsız bir biçimde sistemler arası veriyi aktarmanın bir yoludur. Json veri yapısı özelliğinden yoksun saf bir dizedir ancak dictionary karma nesneler içerebilir. Python’da dictionary’de tek tırnak kullanılırken, Json’da çift tırnak kullanılır. Json’da keyler tekrarlanabilirken, dictionary’de tekrarlanamaz. Dictionary'de nesne döndürülürken, json 'da string döndürülür.
+
+
+# 1.2 - Dumps ne işe yarar?
+
+    Python'daki veri tiplerini Json formatına çevirmeye yarar
+
+# 1.3 - Neden encode kullandık? Neden data.encode.utf-8 şeklinde kullanmadık?
+
+    Bilgilerin UTF-8'e göre daha verimli bir şekilde saklanması için.
+
+# 2.1 - Json load nedir?
+
+    Sadece JSON dosyasındaki verileri Python verisine çevirir. Veriyi parametre olarak almamaktadır.
+
+# 2.2 - Json loads nedir?
+
+    Bir JSON verisini Python dict veri tipine dönüştürür. Veriyi parametre olarak alır. 
+
+# 3 - Dockera girdikten sonra spesific bir container hangi networkta çalışıyor ve default ip nasıl bulunacak?
+
+    Bridge network üzerinden çalışmakta. powershell arayüzünde docker network inspect bridge komutu ile hangi networkte çalıştığını öğrenebiliriz.
+
+    docker inspect -f “{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}” ContainerID
+
+# 4 - Kod json.dumps değil de json.dump ile deneyerek yazılacak.
+
+    producer.send( OREDER_KAFKA_TOPİC, with open("sample.json", "w") as outfile: json.dump(data, outfile) f = open("demofile.txt", "r") f.read() )
+
+# 5 - Neden UTF-8 kullanıyoruz?
+
+    Geriye dönük uyumlu, tek veya çok boyutlu karakterler arasında ayrım yapabilen. Değişken kod uzunluğu, kendini eş zamanlama gibi özelliklere sahiptir. Tüm dünya alfabelerini kapsayan on binlerce karakter söz konusudur. Ayrıca dünya dillerinin çoğunu kapsıyor oluması kullanımını etkiliyor.
+
+# 6 - 192.168.0.1 nedir ve 127.00.01 arasındaki fark nedir?
+
+    192.168.0.1: Modem IP adresi, ülkemizde sıklıkla kullanılan yerel IP adreslerinden biridir. Kablosuz yönlendiricimize erişebilir ve bunları bu adres üzerinden yapılandırabiliriz. 127.0.0.1: Bilgisayarın sahip olduğu yerel IP adresi yani bir diğer deyişle Localhost adresidir ve evrenseldir
